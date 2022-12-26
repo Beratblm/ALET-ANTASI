@@ -25,18 +25,10 @@ class Route{
             require $controlfile;
             call_user_func_array([new $controller[0],$controller[1]], $parameters);
           }
-            
-          
+                
            
         }
     }
-
 }
-
-
-
-
-
-
 
 ?>
