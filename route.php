@@ -15,6 +15,7 @@ class Route{
     public static function run($url, $callback, $method="GET"){
         $request_uri = self::parse_url();
         if(preg_match("@^".$url."$@", $request_uri, $parameters)){
+            unset($parameters[0]);
             if(is_callable($callback)){
                echo call_user_func_array($callback, $parameters);
             }
